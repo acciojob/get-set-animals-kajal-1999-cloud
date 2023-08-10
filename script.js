@@ -9,8 +9,8 @@ get species(){
 	return this.Species;
 }
 
-makeSound(){
-	console.log(`the animal makes${this.Species} sound`)
+makeSound(sound){
+	console.log(`the ${this.Species} makes a sound`)
 }
 class Dog extends Animal {
 	bark(){
@@ -23,6 +23,8 @@ class Cat extends Animal {
 		console.log("purr");
 	}
 }
+Dog.bark();
+Cat.purr();
 
 // Do not change the code below this line
 window.Animal = Animal;
