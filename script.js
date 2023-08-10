@@ -1,9 +1,28 @@
 //complete this code
-class Animal {}
+class Animal {
+	constructor(species){
+		this.Species = species;
+	}
+}
 
-class Dog extends Animal {}
+get species(){
+	return this.Species;
+}
 
-class Cat extends Animal {}
+makeSound(){
+	console.log(`the animal makes${this.Species} sound`)
+}
+class Dog extends Animal {
+	bark(){
+		console.log("woof")
+	}
+}
+
+class Cat extends Animal {
+	purr(){
+		console.log("purr");
+	}
+}
 
 // Do not change the code below this line
 window.Animal = Animal;
