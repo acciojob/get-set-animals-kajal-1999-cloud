@@ -1,48 +1,43 @@
 //complete this code
 class Animal {
-	constructor(species){
-	this._species = species
-	}
-	get species(){
-	return this._species
-	}
-	makeSound(){
-		console.log(`The ${species} makes a sound`)
-	}
-}
+  constructor(species) {
+    this._species = species;
+  }
 
+  get species() {
+    return this._species;
+  }
 
-class Dog extends Animal {
-	bark(){
-		console.log("woof")
-	}
+  makeSound() {
+    console.log(`The ${this.species} makes a sound`);
+  }
 }
 
 class Cat extends Animal {
-	purr(){
-		console.log("purr")
-	}
+  purr() {
+    console.log("purr");
+  }
 }
 
-const animal = new Animal("Unknown");
-console.log(animal.species); // Output: Unknown
-animal.makeSound(); // Output: Some generic animal sound
+class Dog extends Animal {
+  bark() {
+    console.log("woof");
+  }
+}
 
-const cat = new Cat("Cat");
-console.log(cat.species); // Output: Cat
-cat.makeSound(); // Output: Some generic animal sound
-cat.purr(); // Output: purr
+let animal = new Animal("Animals");
+console.log(animal.species);  
+animal.makeSound(); 
 
-const dog = new Dog("Dog");
-console.log(dog.species); // Output: Dog
-dog.makeSound(); // Output: Some generic animal sound
-dog.bark(); // Output: woof
+let cat = new Cat("Cat");
+console.log(cat.species);  
+cat.makeSound();  
+cat.purr();  
 
-
-
-
-
-
+let dog = new Dog("Dog");
+console.log(dog.species);
+dog.makeSound();  
+dog.bark(); 
 
 
 // Do not change the code below this line
